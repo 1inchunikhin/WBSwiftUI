@@ -38,39 +38,39 @@ struct Subheading2: ViewModifier {
 struct BodyText1: ViewModifier {
 	func body(content: Content) -> some View {
 		content
-			.font(.system(size: 16, weight: .semibold))
+			.font(.system(size: 14, weight: .semibold))
 	}
 }
 
 struct BodyText2: ViewModifier {
 	func body(content: Content) -> some View {
 		content
-			.font(.system(size: 16, weight: .regular))
+			.font(.system(size: 14, weight: .regular))
 	}
 }
 
 struct Metadata1: ViewModifier {
 	func body(content: Content) -> some View {
 		content
-			.font(.system(size: 16, weight: .regular))
+			.font(.system(size: 12, weight: .regular))
 	}
 }
 
 struct Metadata2: ViewModifier {
 	func body(content: Content) -> some View {
 		content
-			.font(.system(size: 16, weight: .regular))
+			.font(.system(size: 10, weight: .regular))
 	}
 }
 
 struct Metadata3: ViewModifier {
 	func body(content: Content) -> some View {
 		content
-			.font(.system(size: 16, weight: .semibold))
+			.font(.system(size: 10, weight: .semibold))
 	}
 }
 
-extension Text {
+extension View {
 	func heading1() -> some View {
 		self.modifier(Heading1())
 	}
