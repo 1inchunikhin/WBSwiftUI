@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D3523CF2C1BA9800051BAC4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3523CE2C1BA9800051BAC4 /* Fonts.swift */; };
 		8D8D2E9E2C19A16B002287C0 /* WBSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D2E9D2C19A16B002287C0 /* WBSwiftUIApp.swift */; };
 		8D8D2EA02C19A16B002287C0 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D2E9F2C19A16B002287C0 /* TabBarView.swift */; };
 		8D8D2EA22C19A16C002287C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D2EA12C19A16C002287C0 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D3523CE2C1BA9800051BAC4 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		8D8D2E9A2C19A16B002287C0 /* WBSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8D2E9D2C19A16B002287C0 /* WBSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBSwiftUIApp.swift; sourceTree = "<group>"; };
 		8D8D2E9F2C19A16B002287C0 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -36,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D3523CD2C1BA9690051BAC4 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8D3523CE2C1BA9800051BAC4 /* Fonts.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		8D8D2E912C19A16B002287C0 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 		8D8D2EAC2C19AD93002287C0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8D3523CD2C1BA9690051BAC4 /* Constants */,
 				8D8D2EA12C19A16C002287C0 /* Assets.xcassets */,
 				8D8D2EAD2C19ADEE002287C0 /* Colors.xcassets */,
 			);
@@ -176,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D3523CF2C1BA9800051BAC4 /* Fonts.swift in Sources */,
 				8D8D2EB22C19AE25002287C0 /* OnboardingView.swift in Sources */,
 				8D8D2EA02C19A16B002287C0 /* TabBarView.swift in Sources */,
 				8D8D2E9E2C19A16B002287C0 /* WBSwiftUIApp.swift in Sources */,
