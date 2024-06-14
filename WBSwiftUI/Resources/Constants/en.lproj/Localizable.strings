@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  WBSwiftUI
+
+  Created by Николай Чунихин on 14.06.2024.
+  
+*/
+
+//MARK: - Onboarding
+
+"onboardingTitle" = "Communicate with friends\nand family easily" ;
+"onboardingAdditionalText" = "By clicking continue I agree to the";
+"privacyPolicy" = "Privacy Policy";
+"onboardingAnd" = "and";
+"termOfUse" = "Term of use";
+"onboardingButton" = "Start chatting";
