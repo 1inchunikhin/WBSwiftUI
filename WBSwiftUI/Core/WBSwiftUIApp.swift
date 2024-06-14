@@ -11,7 +11,7 @@ import SwiftUI
 struct WBSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            TabBarView()
+            OnboardingView()
         }
     }
 }

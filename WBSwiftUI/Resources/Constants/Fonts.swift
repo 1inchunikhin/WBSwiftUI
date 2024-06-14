@@ -60,6 +60,7 @@ struct Metadata2: ViewModifier {
 	func body(content: Content) -> some View {
 		content
 			.font(.system(size: 10, weight: .regular))
+			.foregroundStyle(.gray)
 	}
 }
 
@@ -75,7 +76,7 @@ extension View {
 		self.modifier(Heading1())
 	}
 	
-	func headin2() -> some View {
+	func heading2() -> some View {
 		self.modifier(Heading2())
 	}
 	
