@@ -20,6 +20,7 @@
 		8D8D2EA52C19A16C002287C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D2EA42C19A16C002287C0 /* Preview Assets.xcassets */; };
 		8D8D2EAE2C19ADEE002287C0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D2EAD2C19ADEE002287C0 /* Colors.xcassets */; };
 		8D8D2EB22C19AE25002287C0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D2EB12C19AE25002287C0 /* OnboardingView.swift */; };
+		8DA50A282C223EBE00B2A53C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA50A272C223EBE00B2A53C /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8D8D2EA42C19A16C002287C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8D8D2EAD2C19ADEE002287C0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		8D8D2EB12C19AE25002287C0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		8DA50A272C223EBE00B2A53C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		8D8D2EAB2C19AD84002287C0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8DA50A262C223EA100B2A53C /* Services */,
 				8D3523DD2C1BB95D0051BAC4 /* CommonUI */,
 				8D3523D22C1BAE8A0051BAC4 /* Extensions */,
 				8D8D2E9D2C19A16B002287C0 /* WBSwiftUIApp.swift */,
@@ -157,6 +160,14 @@
 				8D8D2EB12C19AE25002287C0 /* OnboardingView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8DA50A262C223EA100B2A53C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8DA50A272C223EBE00B2A53C /* Router.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +245,7 @@
 			files = (
 				8D3523DA2C1BB7340051BAC4 /* Images.swift in Sources */,
 				8D3523E22C1BBC790051BAC4 /* AdditionalTextView.swift in Sources */,
+				8DA50A282C223EBE00B2A53C /* Router.swift in Sources */,
 				8D3523CF2C1BA9800051BAC4 /* Fonts.swift in Sources */,
 				8D8D2EB22C19AE25002287C0 /* OnboardingView.swift in Sources */,
 				8D3523DF2C1BB9740051BAC4 /* MainButtonView.swift in Sources */,

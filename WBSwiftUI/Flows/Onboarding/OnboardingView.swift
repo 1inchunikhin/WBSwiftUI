@@ -10,6 +10,7 @@ import SwiftUI
 struct OnboardingView: View {
 	
 	@State var isPresentSheet = false
+	@AppStorage("onboarding") var isCompleted = false
 	
     var body: some View {
 		VStack {
@@ -37,18 +38,10 @@ struct OnboardingView: View {
 			MainButtonView(
 				text: Texts.Onboarding.buttonTitle
 			) {
-				isPresentSheet = true
+				isCompleted.toggle()
 			}
 			.padding(.horizontal, 24)
 			.padding(.bottom, 32)
-			.sheet(isPresented: $isPresentSheet, content: {
-				Button {
-					isPresentSheet = false
-				} label: {
-					Text("dismiss")
-				}
-
-			})
 		}
     }
 }

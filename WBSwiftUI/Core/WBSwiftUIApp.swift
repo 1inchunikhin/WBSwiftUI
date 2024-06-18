@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct WBSwiftUIApp: App {
+	
+	@StateObject var router: Router = .init()
+	
     var body: some Scene {
         WindowGroup {
             TabBarView()
+				.environmentObject(router)
         }
     }
 }
