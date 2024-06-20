@@ -23,6 +23,8 @@
 		8DA50A282C223EBE00B2A53C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA50A272C223EBE00B2A53C /* Router.swift */; };
 		8DA50A2B2C2242EE00B2A53C /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA50A2A2C2242EE00B2A53C /* ContactsView.swift */; };
 		8DA50A2E2C22436B00B2A53C /* ContactRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA50A2D2C22436B00B2A53C /* ContactRowView.swift */; };
+		8DA50A312C23C55400B2A53C /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA50A302C23C55400B2A53C /* Contact.swift */; };
+		8DA50A332C24846200B2A53C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA50A322C24846200B2A53C /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		8DA50A272C223EBE00B2A53C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		8DA50A2A2C2242EE00B2A53C /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		8DA50A2D2C22436B00B2A53C /* ContactRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRowView.swift; sourceTree = "<group>"; };
+		8DA50A302C23C55400B2A53C /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		8DA50A322C24846200B2A53C /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				8D3523DE2C1BB9740051BAC4 /* MainButtonView.swift */,
+				8DA50A322C24846200B2A53C /* SearchBar.swift */,
 			);
 			path = CommonUI;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 		8DA50A292C22429A00B2A53C /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				8DA50A2F2C23C47F00B2A53C /* DataLayer */,
 				8DA50A2C2C22433E00B2A53C /* SubViews */,
 				8DA50A2A2C2242EE00B2A53C /* ContactsView.swift */,
 			);
@@ -190,6 +196,14 @@
 				8DA50A2D2C22436B00B2A53C /* ContactRowView.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		8DA50A2F2C23C47F00B2A53C /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				8DA50A302C23C55400B2A53C /* Contact.swift */,
+			);
+			path = DataLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DA50A312C23C55400B2A53C /* Contact.swift in Sources */,
 				8D3523DA2C1BB7340051BAC4 /* Images.swift in Sources */,
 				8D3523E22C1BBC790051BAC4 /* AdditionalTextView.swift in Sources */,
 				8DA50A282C223EBE00B2A53C /* Router.swift in Sources */,
@@ -274,6 +289,7 @@
 				8D8D2EA02C19A16B002287C0 /* TabBarView.swift in Sources */,
 				8D3523D42C1BAEA90051BAC4 /* StringEx.swift in Sources */,
 				8D3523D12C1BAD480051BAC4 /* Texts.swift in Sources */,
+				8DA50A332C24846200B2A53C /* SearchBar.swift in Sources */,
 				8DA50A2B2C2242EE00B2A53C /* ContactsView.swift in Sources */,
 				8DA50A2E2C22436B00B2A53C /* ContactRowView.swift in Sources */,
 				8D8D2E9E2C19A16B002287C0 /* WBSwiftUIApp.swift in Sources */,
