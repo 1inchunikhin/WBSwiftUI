@@ -17,21 +17,33 @@ struct TabBarView: View {
 		if isCompleted {
 			TabView(selection: $router.selectedTab) {
 				
-				Text("Contacts")
+				ContactsView()
 					.tabItem {
-						Image(systemName: "person")
+						if router.selectedTab == .contacts {
+							Image("contacts.tab.fil")
+						} else {
+							Image("contacts.tab")
+						}
 					}
 					.tag(Router.Tab.contacts)
 				
 				Text("Chats")
 					.tabItem {
-						Image(systemName: "person")
+						if router.selectedTab == .chats {
+							Image("chats.tab.fil")
+						} else {
+							Image("chats.tab")
+						}
 					}
 					.tag(Router.Tab.chats)
 				
 				Text("Profile")
 					.tabItem {
-						Image(systemName: "person")
+						if router.selectedTab == .profile {
+							Image("profile.tab.fil")
+						} else {
+							Image("profile.tab")
+						}
 					}
 					.tag(Router.Tab.profile)
 			}

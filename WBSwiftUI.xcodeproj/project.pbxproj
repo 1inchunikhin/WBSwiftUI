@@ -21,6 +21,8 @@
 		8D8D2EAE2C19ADEE002287C0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D2EAD2C19ADEE002287C0 /* Colors.xcassets */; };
 		8D8D2EB22C19AE25002287C0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D2EB12C19AE25002287C0 /* OnboardingView.swift */; };
 		8DA50A282C223EBE00B2A53C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA50A272C223EBE00B2A53C /* Router.swift */; };
+		8DA50A2B2C2242EE00B2A53C /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA50A2A2C2242EE00B2A53C /* ContactsView.swift */; };
+		8DA50A2E2C22436B00B2A53C /* ContactRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA50A2D2C22436B00B2A53C /* ContactRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		8D8D2EAD2C19ADEE002287C0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		8D8D2EB12C19AE25002287C0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		8DA50A272C223EBE00B2A53C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		8DA50A2A2C2242EE00B2A53C /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		8DA50A2D2C22436B00B2A53C /* ContactRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,7 @@
 		8D8D2EAF2C19AE05002287C0 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				8DA50A292C22429A00B2A53C /* Contacts */,
 				8D8D2EB02C19AE11002287C0 /* Onboarding */,
 			);
 			path = Flows;
@@ -168,6 +173,23 @@
 				8DA50A272C223EBE00B2A53C /* Router.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		8DA50A292C22429A00B2A53C /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				8DA50A2C2C22433E00B2A53C /* SubViews */,
+				8DA50A2A2C2242EE00B2A53C /* ContactsView.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		8DA50A2C2C22433E00B2A53C /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				8DA50A2D2C22436B00B2A53C /* ContactRowView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +274,8 @@
 				8D8D2EA02C19A16B002287C0 /* TabBarView.swift in Sources */,
 				8D3523D42C1BAEA90051BAC4 /* StringEx.swift in Sources */,
 				8D3523D12C1BAD480051BAC4 /* Texts.swift in Sources */,
+				8DA50A2B2C2242EE00B2A53C /* ContactsView.swift in Sources */,
+				8DA50A2E2C22436B00B2A53C /* ContactRowView.swift in Sources */,
 				8D8D2E9E2C19A16B002287C0 /* WBSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
