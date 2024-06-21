@@ -21,6 +21,17 @@ struct ContactsView: View {
 				SearchBar(text: $search, placeholder: "Поиск")
 					.padding(.horizontal)
 					.padding(.vertical, 4)
+				List {
+					ForEach(contacts.filter{
+						search.isEmpty ? true : $0.name.lowercased().contains(search.lowercased())
+					}
+					, id: \.name) { contact in
+						ContactRowView(contact: contact)
+					}
+				}
+				.listStyle(.plain)
+				
+				
 				Spacer()
 				
 				
@@ -72,11 +83,59 @@ struct ContactsView: View {
 
 fileprivate enum Mock {
 	static let contacts: [Contact] = [
-		.init(name: "Анастасия", lastname: "Иванова", image: "person.fil", date: Date()),
-		.init(name: "Петя", lastname: nil, image: "person.fil", date: Date()),
-		.init(name: "Маман", lastname: nil, image: "person.fil", date: Date()),
-		.init(name: "Арбуз", lastname: "Дыни", image: "person.fil", date: Date()),
-		.init(name: "Иван", lastname: "Иванов", image: nil, date: Date()),
-		.init(name: "Лиса", lastname: "Алиса", image: nil, date: Date())
+		.init(
+			name: "Анастасия",
+			lastname: "Иванова",
+			image: "onboarding",
+			date: Date(
+				timeIntervalSinceNow: -100000
+			),
+			hasHistory: true,
+			hasNotification: false
+		),
+		.init(
+			name: "Петя",
+			lastname: nil,
+			image: "onboarding",
+			date: Date(),
+			hasHistory: true,
+			hasNotification: false
+		),
+		.init(
+			name: "Маман",
+			lastname: nil,
+			image: "onboarding",
+			date: Date(
+				timeIntervalSinceNow: -14000
+			),
+			hasHistory: true,
+			hasNotification: false
+		),
+		.init(
+			name: "Арбуз",
+			lastname: "Дыни",
+			image: "onboarding",
+			date: Date(),
+			hasHistory: true,
+			hasNotification: false
+		),
+		.init(
+			name: "Иван",
+			lastname: "Иванов",
+			image: nil,
+			date: Date(),
+			hasHistory: true,
+			hasNotification: false
+		),
+		.init(
+			name: "Лиса",
+			lastname: "Алиса",
+			image: nil,
+			date: Date(
+				timeIntervalSinceNow: -6020
+			),
+			hasHistory: true,
+			hasNotification: false
+		)
 	]
 }

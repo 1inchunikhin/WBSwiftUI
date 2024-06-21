@@ -12,4 +12,6 @@ struct Contact {
 	let lastname: String?
 	let image: String?
 	let date: Date
+	var hasHistory: Bool
+	var hasNotification: Bool
 }
