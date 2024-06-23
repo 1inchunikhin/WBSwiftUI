@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Contact {
+struct Contact: Hashable {
 	let name: String
 	let lastname: String?
 	let image: String?

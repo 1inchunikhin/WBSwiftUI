@@ -17,6 +17,6 @@ class Router: ObservableObject {
 	}
 	
 	enum Route: Hashable {
-		case detailContact
+			case detailContact(Contact)
 	}
 }

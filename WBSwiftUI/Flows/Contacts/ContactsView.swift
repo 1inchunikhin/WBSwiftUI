@@ -10,6 +10,8 @@ import SwiftUI
 struct ContactsView: View {
 	
 	@EnvironmentObject var router: Router
+	@Environment(\.dismiss) var dismiss
+	
 	@State private var contacts: [Contact] = Mock.contacts
 	@State private var addContactScreenIsPresented = false
 	@State private var search: String = ""
@@ -25,8 +27,11 @@ struct ContactsView: View {
 					ForEach(contacts.filter{
 						search.isEmpty ? true : $0.name.lowercased().contains(search.lowercased())
 					}
-					, id: \.name) { contact in
-						ContactRowView(contact: contact)
+							, id: \.name) { contact in
+						
+						NavigationLink(value: Router.Route.detailContact(contact)) {
+							ContactRowView(contact: contact)
+						}
 					}
 				}
 				.listStyle(.plain)
@@ -37,6 +42,30 @@ struct ContactsView: View {
 				
 				
 			}
+			.navigationDestination(for: Router.Route.self) { route in
+				switch route {
+				case .detailContact(let contact):
+					ContactsInfoView(contact: contact)
+						//.navigationTitle("Detail")
+						.navigationBarTitleDisplayMode(.inline)
+						.navigationBarBackButtonHidden()
+						.toolbar {
+							ToolbarItem(placement: .navigationBarLeading) {
+								Button(action: {
+									router.path.removeLast()
+								}) {
+									HStack {
+										Image(systemName: "chevron.left")
+											.foregroundStyle(.accent)
+									}
+								}
+							}
+						}
+				}
+				
+				
+			}
+			.environmentObject(router)
 			.navigationBarTitleDisplayMode(.inline)
 			.navigationBarBackButtonHidden(true)
 			.toolbar {
@@ -58,13 +87,7 @@ struct ContactsView: View {
 			}
 			
 		}
-		.navigationDestination(for: Router.Route.self) { page in
-			switch page {
-			case .detailContact:
-				Text("detail contact")
-			}
-			
-		}
+		
 		.fullScreenCover(isPresented: $addContactScreenIsPresented, content: {
 			Button {
 				addContactScreenIsPresented.toggle()
@@ -90,8 +113,8 @@ fileprivate enum Mock {
 			date: Date(
 				timeIntervalSinceNow: -100000
 			),
-			hasHistory: true,
-			hasNotification: false
+			hasHistory: false,
+			hasNotification: true
 		),
 		.init(
 			name: "Петя",
