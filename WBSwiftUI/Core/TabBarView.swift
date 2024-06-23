@@ -8,17 +8,53 @@
 import SwiftUI
 
 struct TabBarView: View {
+	
+	@EnvironmentObject var router: Router
+	
+	@AppStorage("onboarding") var isCompleted = false
+	
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+		if isCompleted {
+			TabView(selection: $router.selectedTab) {
+				
+				ContactsView()
+					.tabItem {
+						if router.selectedTab == .contacts {
+							Image("contacts.tab.fil")
+						} else {
+							Image("contacts.tab")
+						}
+					}
+					.tag(Router.Tab.contacts)
+				
+				Text("Chats")
+					.tabItem {
+						if router.selectedTab == .chats {
+							Image("chats.tab.fil")
+						} else {
+							Image("chats.tab")
+						}
+					}
+					.tag(Router.Tab.chats)
+				
+				Text("Profile")
+					.tabItem {
+						if router.selectedTab == .profile {
+							Image("profile.tab.fil")
+						} else {
+							Image("profile.tab")
+						}
+					}
+					.tag(Router.Tab.profile)
+			}
+			.environmentObject(router)
+		} else {
+			OnboardingView()
+		}
     }
 }
 
 #Preview {
     TabBarView()
+		.environmentObject(Router())
 }
